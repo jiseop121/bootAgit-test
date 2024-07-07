@@ -6,6 +6,7 @@ import org.happyisland.problem.IO.Output;
 import org.happyisland.problem.calculator.HappyNumberChecker;
 import org.happyisland.problem.calculator.HappyNumberCheckerV1;
 import org.happyisland.problem.dto.KingNumber;
+import org.happyisland.problem.message.ErrorMessage;
 import org.happyisland.problem.message.ResultMessage;
 
 /**
@@ -24,12 +25,15 @@ public class HappyIsland {
     public void run(){
         KingNumber kingNumber = Input.InputKingNumber();
 
-        if(isOutOfRangeNumber(kingNumber.getNumber())){ // 요구하는 숫자가 범위를 넘어가면 해당 프로그램 종료
-            System.out.println(ResultMessage.OUT_OF_RANGE.getMessage());
-            return;
-        }
+        checkOutOfRangeNumber(kingNumber);
 
         Output.displayResult(happyNumberChecker.isHappy(kingNumber.getNumber()));
+    }
+
+    private void checkOutOfRangeNumber(KingNumber kingNumber) {
+        if(isOutOfRangeNumber(kingNumber.getNumber())){ // 요구하는 숫자가 범위를 넘어가면 해당 프로그램 종료
+            throw new IllegalArgumentException(ErrorMessage.OUT_OF_RANGE.getMessage());
+        }
     }
 
     private boolean isOutOfRangeNumber(int n){ // 제한수 체크
