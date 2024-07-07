@@ -1,6 +1,7 @@
 package org.happyisland.problem.dto;
 
 public class KingNumber {
+
     private final int number;
 
     public KingNumber(int number) {

@@ -7,12 +7,12 @@ import org.happyisland.problem.calculator.HappyNumberChecker;
 import org.happyisland.problem.calculator.HappyNumberCheckerV1;
 import org.happyisland.problem.dto.KingNumber;
 import org.happyisland.problem.message.ErrorMessage;
-import org.happyisland.problem.message.ResultMessage;
 
 /**
  * 해피 아일랜드 프로그램 실행 로직
  */
 public class HappyIsland {
+
     private static final int MINIMUM = 1;
     private static final int MAXIMUM = 1000000;
 
@@ -22,7 +22,7 @@ public class HappyIsland {
         this.happyNumberChecker = new HappyNumberCheckerV1();
     }
 
-    public void run(){
+    public void run() {
         KingNumber kingNumber = Input.InputKingNumber();
 
         checkOutOfRangeNumber(kingNumber);
@@ -31,12 +31,12 @@ public class HappyIsland {
     }
 
     private void checkOutOfRangeNumber(KingNumber kingNumber) {
-        if(isOutOfRangeNumber(kingNumber.getNumber())){ // 요구하는 숫자가 범위를 넘어가면 해당 프로그램 종료
+        if (isOutOfRangeNumber(kingNumber.getNumber())) { // 요구하는 숫자가 범위를 넘어가면 해당 프로그램 종료
             throw new IllegalArgumentException(ErrorMessage.OUT_OF_RANGE.getMessage());
         }
     }
 
-    private boolean isOutOfRangeNumber(int n){ // 제한수 체크
+    private boolean isOutOfRangeNumber(int n) { // 제한수 체크
         return MINIMUM > n || n > MAXIMUM;
     }
 }

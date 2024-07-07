@@ -8,6 +8,7 @@ public enum ResultMessage {
     HAPPY_NUMBER("1");
 
     private final String message;
+
     ResultMessage(String message) {
         this.message = message;
     }
