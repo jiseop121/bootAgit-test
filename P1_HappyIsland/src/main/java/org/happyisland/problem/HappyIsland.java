@@ -23,11 +23,11 @@ public class HappyIsland {
     }
 
     public void run() {
-        KingNumber kingNumber = Input.InputKingNumber();
+        KingNumber kingNumber = Input.InputKingNumber(); // 입력 받기
 
-        checkOutOfRangeNumber(kingNumber);
+        checkOutOfRangeNumber(kingNumber); //범위 체크
 
-        Output.displayResult(happyNumberChecker.isHappy(kingNumber.getNumber()));
+        Output.displayResult(happyNumberChecker.isHappy(kingNumber.getNumber())); // 계산 후 결과 출력
     }
 
     private void checkOutOfRangeNumber(KingNumber kingNumber) {
