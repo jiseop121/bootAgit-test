@@ -1,5 +1,6 @@
-import problem.HappyIsland;
-import problem.calculator.HappyNumberChecker;
+package org.happyisland;
+
+import org.happyisland.problem.HappyIsland;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package problem.calculator;
+package org.happyisland.problem.calculator;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,6 +10,7 @@ public class HappyNumberCheckerV1 implements HappyNumberChecker {
         while (n != 1 && !seen.contains(n)) {
             seen.add(n);
             n = getNextNumber(n);
+            System.out.println(n);
         }
         return n == 1;  // 1이 되면 true를 반환하고, 사이클이 발생하면 false를 반환
     }

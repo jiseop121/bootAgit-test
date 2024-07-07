@@ -1,6 +1,6 @@
-package problem.IO;
+package org.happyisland.problem.IO;
 
-import problem.message.ResultMessage;
+import org.happyisland.problem.message.ResultMessage;
 
 public class Output {
 

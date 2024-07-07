@@ -1,4 +1,4 @@
-package problem.IO;
+package org.happyisland.problem.IO;
 
 import java.util.Scanner;
 

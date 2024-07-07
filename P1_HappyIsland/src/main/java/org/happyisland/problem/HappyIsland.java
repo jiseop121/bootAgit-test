@@ -1,10 +1,11 @@
-package problem;
+package org.happyisland.problem;
 
-import problem.IO.Input;
-import problem.IO.Output;
-import problem.calculator.HappyNumberChecker;
-import problem.calculator.HappyNumberCheckerV1;
-import problem.message.ResultMessage;
+
+import org.happyisland.problem.IO.Input;
+import org.happyisland.problem.IO.Output;
+import org.happyisland.problem.calculator.HappyNumberChecker;
+import org.happyisland.problem.calculator.HappyNumberCheckerV1;
+import org.happyisland.problem.message.ResultMessage;
 
 public class HappyIsland {
     private static final int MINIMUM = 1;
@@ -31,5 +32,3 @@ public class HappyIsland {
         return MINIMUM > n || n > MAXIMUM;
     }
 }
-
-//
