@@ -11,7 +11,7 @@ import org.happyisland.problem.message.ErrorMessage;
 /**
  * 해피 아일랜드 프로그램 실행 로직
  */
-public class HappyIsland {
+public class HappyIsland{
 
     private static final int MINIMUM = 1;
     private static final int MAXIMUM = 1000000;
