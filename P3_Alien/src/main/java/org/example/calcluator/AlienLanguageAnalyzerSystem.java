@@ -1,18 +1,16 @@
 package org.example.calcluator;
 
-import static java.util.Collections.sort;
-
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedHashSet;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import org.example.IO.Input;
 import org.example.IO.Output;
 import org.example.message.ErrorMessage;
 import org.example.validation.Validator;
-
 public class AlienLanguageAnalyzerSystem {
+
     public static void run() {
         String alienString = Input.getInput();
         try {
@@ -20,7 +18,6 @@ public class AlienLanguageAnalyzerSystem {
             Validator.validateCharacters(alienString);
             String result = analyzeAlienLanguage(alienString);
             Output.displayResult(result);
-            System.out.println(result);
         } catch (IllegalArgumentException e) {
             Output.displayError(e);
         }
@@ -28,7 +25,7 @@ public class AlienLanguageAnalyzerSystem {
 
     public static String analyzeAlienLanguage(String alienString) {
         // 중복 문자 제거 및 순서 유지
-        Set<Character> uniqueChars = new LinkedHashSet<>();
+        Set<Character> uniqueChars = new HashSet<>();
         for (char c : alienString.toCharArray()) {
             uniqueChars.add(c);
         }
@@ -49,3 +46,4 @@ public class AlienLanguageAnalyzerSystem {
         return smallestChar + " (인덱스: " + index + ")";
     }
 }
+
