@@ -5,6 +5,12 @@ public enum ResultMessage {
     UNHAPPY_NUMBER("0"),
     HAPPY_NUMBER("1");
 
+    private final String message;
     ResultMessage(String message) {
+        this.message = message;
+    }
+
+    public String getMessage() {
+        return message;
     }
 }

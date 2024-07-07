@@ -1,6 +1,5 @@
 package problem;
 
-import java.util.Scanner;
 import problem.IO.Input;
 import problem.IO.Output;
 import problem.calculator.HappyNumberChecker;
@@ -21,7 +20,7 @@ public class HappyIsland {
         int n = Input.InputKingNumber();
 
         if(isOutOfRangeNumber(n)){
-            System.out.println(ResultMessage.OUT_OF_RANGE);
+            System.out.println(ResultMessage.OUT_OF_RANGE.getMessage());
             return;
         }
 
